@@ -10,9 +10,11 @@ public class Main {
     public static void main(String[] args) {
         int rollingTurn = 0;
         dice = new Die[5];
+        boolean flagIfYatzi = true;
         for(int d=0;d<5;d++) {
             dice[d] = new Die();
         }
+        
         while(gameIsOn) {
             System.out.println("Welcome to Yatzi!");
             while(rollingTurn < 3) {
@@ -22,7 +24,6 @@ public class Main {
                     //ds[i].value = 5; //Test if yatzi work
                     System.out.println(i+1 + ": " + dice[i].getString());
                 }
-                boolean flagIfYatzi = true;
                 for(int j=1;j<5;j++) {
                     if (dice[j].value != dice[j - 1].value) {
                         flagIfYatzi = false;
