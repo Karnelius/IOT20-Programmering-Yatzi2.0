@@ -1,7 +1,6 @@
 package com.company;
 
-public class BoardGameMaterial {
-}
+
 
 class Die {
 
@@ -12,7 +11,7 @@ class Die {
     }
 
     public int DieRoll() {
-        value = (int)(Math.random()*6+1);
+        value = (int) (Math.random() * 6 + 1);
         return value;
 
     }
