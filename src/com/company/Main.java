@@ -13,7 +13,6 @@ public class Main {
         for(int d=0;d<5;d++) {
             dice[d] = new Die();
         }
-        //We will continue until the game is over
         while(gameIsOn) {
             rollingTurn = 0;
             System.out.println("Welcome to Yatzi!");
@@ -22,7 +21,7 @@ public class Main {
                 for(int i=0;i<dice.length;i++) {
                     dice[i].DieRoll();
                     //ds[i].value = 5; //Test if yatzi work
-                    System.out.println(i + ": " + dice[i].getString());
+                    System.out.println(i+1 + ": " + dice[i].getString());
                 }
                 //YATZI
                 boolean flag = true;
