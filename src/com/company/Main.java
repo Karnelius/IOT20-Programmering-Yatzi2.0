@@ -16,13 +16,13 @@ public class Main {
         }
         
         while(gameIsOn) {
-            System.out.println("Welcome to Yatzi!");
+            welcomeMessage();
             while(rollingTurn < 3) {
                 System.out.println("Starting turn " + (rollingTurn+1) + " of 3, rolling dice.");
                 for(int i=0;i<dice.length;i++) {
                     dice[i].DieRoll();
                     //ds[i].value = 5; //Test if yatzi work
-                    System.out.println(i+1 + ": " + dice[i].getString());
+                    System.out.println(i+1 + ": " + dice[i].diceString());
                 }
                 for(int j=1;j<5;j++) {
                     if (dice[j].value != dice[j - 1].value) {
@@ -57,5 +57,8 @@ public class Main {
                 }
             }
         }
+    }
+    static void welcomeMessage(){
+        System.out.println("Welcome to Yatzi");
     }
 }

@@ -17,7 +17,7 @@ class Die {
 
     }
 
-    public String getString() {
+    public String diceString() {
         return "Dice shows " + value;
     }
 }
