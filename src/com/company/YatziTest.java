@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class YatziTest {
-    @DisplayName("va vill vi här?")
+    @DisplayName("Se att den skriver ut Yatzi när man får alla rätt?")
     @Test
     void isYatziWhenAllDiceMatches() {
         Die[] dice = new Die[5];
@@ -17,7 +17,7 @@ public class YatziTest {
         }
         //Assert something?
     }
-    @DisplayName("Vad ville vi här då?")
+    @DisplayName("Fortsätter när man inte får 5 matchande dices?")
     @Test
     void isNotYatziWhenOneDieIsNotMatchingTheOther() {
         Die[] dice = new Die[5];

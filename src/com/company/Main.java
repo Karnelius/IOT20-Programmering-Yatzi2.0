@@ -27,9 +27,10 @@ public class Main {
                 //YATZI
                 boolean flag = true;
                 for(int j=1;j<5;j++) {
-                    if(dice[j].value!=dice[j-1].value) {
+                    if (dice[j].value != dice[j - 1].value) {
                         //Set flag to false
                         flag = false;
+                        break;
                     }
                 }
                 if(flag) {
