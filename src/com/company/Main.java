@@ -22,14 +22,7 @@ public class Main {
                     dice[i].DieRoll();
                     System.out.println(i + 1 + ": " + dice[i].diceString());
                 }
-
-                boolean flagIfYatzi = true;
-                for (int j = 1; j < 5; j++) {
-                    if (dice[j].value != dice[j - 1].value) {
-                        flagIfYatzi = false;
-                    }
-                }
-                if (flagIfYatzi) {
+                if (flagIfYatzi()) {
                     System.out.println("You got YATZI! in " + dice[0].value + "'s");
                     return;
                 } else {
@@ -44,18 +37,12 @@ public class Main {
                     }
                 }
             }
-        }
+        } // retur värde boolean . Rad 32 kalla
 
 
     static void welcomeMessage() {
         System.out.println("Welcome to Yatzi");
     }
-
- /*   static void continueToPlay() {
-        Scanner sc = new Scanner(System.in);
-        sc.next().equals("y");
-
-    }*/
 
     static void ContinueToPlay(int i){
         Scanner sc = new Scanner(System.in);
@@ -63,6 +50,15 @@ public class Main {
         } else {
             gameIsOn = !gameIsOn;
         }
+    }
 
+    static boolean flagIfYatzi(){
+        boolean flagIfYatzi = true;
+        for (int j = 1; j < 5; j++) {
+            if (dice[j].value != dice[j - 1].value) {
+                flagIfYatzi = false;
+            }
+        }
+        return flagIfYatzi;
     }
 }
