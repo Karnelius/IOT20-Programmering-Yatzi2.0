@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static Die[] dice;
     public static boolean gameIsOn = true;
+    public static int rollingTurn = 0;
 
     public static void main(String[] args) {
-        int rollingTurn = 0;
         theDice();
         while (gameIsOn) {
             welcomeMessage();
