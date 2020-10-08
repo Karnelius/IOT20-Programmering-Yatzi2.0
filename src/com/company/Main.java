@@ -7,13 +7,10 @@ public class Main {
     public static Die[] dice;
     public static boolean gameIsOn = true;
 
+
     public static void main(String[] args) {
         int rollingTurn = 0;
-        dice = new Die[5];
-        for (int d = 0; d < 5; d++) {
-            dice[d] = new Die();
-        }
-
+        theDice();
         while (gameIsOn) {
             welcomeMessage();
             while (rollingTurn < 3) {
@@ -29,22 +26,21 @@ public class Main {
                     if (rollingTurn != 2) {
                         System.out.println("Want to throw again? (y for yes, anything else for no)");
                         ContinueToPlay(rollingTurn++);
-                            break;
-                        }
-                    System.out.println("Game over! Want to play again?");
-                    ContinueToPlay(rollingTurn=0);
-                            break;
+                        break;
                     }
+                    System.out.println("Game over! Want to play again?");
+                    ContinueToPlay(rollingTurn = 0);
+                    break;
                 }
             }
-        } // retur värde boolean . Rad 32 kalla
-
+        }
+    }
 
     static void welcomeMessage() {
         System.out.println("Welcome to Yatzi");
     }
 
-    static void ContinueToPlay(int i){
+    static void ContinueToPlay(int i) {
         Scanner sc = new Scanner(System.in);
         if (sc.next().equals("y")) {
         } else {
@@ -52,7 +48,7 @@ public class Main {
         }
     }
 
-    static boolean flagIfYatzi(){
+    static boolean flagIfYatzi() {
         boolean flagIfYatzi = true;
         for (int j = 1; j < 5; j++) {
             if (dice[j].value != dice[j - 1].value) {
@@ -60,5 +56,12 @@ public class Main {
             }
         }
         return flagIfYatzi;
+    }
+
+    private static void theDice() {
+        dice = new Die[5];
+        for (int d = 0; d < 5; d++) {
+            dice[d] = new Die();
+        }
     }
 }
