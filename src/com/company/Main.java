@@ -21,7 +21,7 @@ public class Main {
                 System.out.println("Starting turn " + (rollingTurn + 1) + " of 3, rolling dice.");
                 for (int i = 0; i < dice.length; i++) {
                     dice[i].DieRoll();
-                    //ds[i].value = 5; //Test if yatzi work
+                    //ds[i].value = 5; //Test if yatzi work // For each?
                     System.out.println(i + 1 + ": " + dice[i].diceString());
                 }
                 for (int j = 1; j < 5; j++) {
@@ -34,7 +34,6 @@ public class Main {
                     System.out.println("You got YATZI! in " + dice[0].value + "'s");
                     return;
                 } else {
-                    //Here we check if there is no Yatzy: then we check what turn we are on and asks the player if we want to continue or not
                     if (rollingTurn != 2) {
                         System.out.println("Want to throw again? (y for yes, anything else for no)");
                         ContinueToPlay(rollingTurn++);
