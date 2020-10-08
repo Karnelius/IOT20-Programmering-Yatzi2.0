@@ -10,7 +10,6 @@ public class Main {
     public static void main(String[] args) {
         int rollingTurn = 0;
         dice = new Die[5];
-        boolean flagIfYatzi = true;
         for (int d = 0; d < 5; d++) {
             dice[d] = new Die();
         }
@@ -21,13 +20,13 @@ public class Main {
                 System.out.println("Starting turn " + (rollingTurn + 1) + " of 3, rolling dice.");
                 for (int i = 0; i < dice.length; i++) {
                     dice[i].DieRoll();
-                    //ds[i].value = 5; //Test if yatzi work // For each?
                     System.out.println(i + 1 + ": " + dice[i].diceString());
                 }
+
+                boolean flagIfYatzi = true;
                 for (int j = 1; j < 5; j++) {
                     if (dice[j].value != dice[j - 1].value) {
                         flagIfYatzi = false;
-                        break;
                     }
                 }
                 if (flagIfYatzi) {
@@ -64,5 +63,6 @@ public class Main {
         } else {
             gameIsOn = !gameIsOn;
         }
+
     }
 }
