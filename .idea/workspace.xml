@@ -39,7 +39,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="IOT20-Programmering-Yatzi2.0" />
@@ -64,9 +64,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="YatziTest.isYatziWhenAllDiceMatches" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IOT20-Programmering-Yatzi2.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.YatziTest" />
+      <option name="METHOD_NAME" value="isYatziWhenAllDiceMatches" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.YatziTest.isYatziWhenAllDiceMatches" />
       </list>
     </recent_temporary>
   </component>
@@ -86,28 +103,28 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1397" height="301" key="GridCell.Tab.0.bottom" timestamp="1602186337660">
+    <state width="1397" height="151" key="GridCell.Tab.0.bottom" timestamp="1602188540090">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="301" key="GridCell.Tab.0.bottom/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602186337660" />
+    <state width="1397" height="151" key="GridCell.Tab.0.bottom/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602188540090" />
     <state width="1877" height="271" key="GridCell.Tab.0.bottom/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1602159201140" />
     <state width="1397" height="180" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1602082599066" />
-    <state width="1397" height="301" key="GridCell.Tab.0.center" timestamp="1602186337660">
+    <state width="1397" height="151" key="GridCell.Tab.0.center" timestamp="1602188540090">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="301" key="GridCell.Tab.0.center/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602186337660" />
+    <state width="1397" height="151" key="GridCell.Tab.0.center/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602188540090" />
     <state width="1877" height="271" key="GridCell.Tab.0.center/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1602159201140" />
     <state width="1397" height="180" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1602082599066" />
-    <state width="1397" height="301" key="GridCell.Tab.0.left" timestamp="1602186337660">
+    <state width="1397" height="151" key="GridCell.Tab.0.left" timestamp="1602188540090">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="301" key="GridCell.Tab.0.left/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602186337660" />
+    <state width="1397" height="151" key="GridCell.Tab.0.left/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602188540090" />
     <state width="1877" height="271" key="GridCell.Tab.0.left/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1602159201139" />
     <state width="1397" height="180" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1602082599066" />
-    <state width="1397" height="301" key="GridCell.Tab.0.right" timestamp="1602186337660">
+    <state width="1397" height="151" key="GridCell.Tab.0.right" timestamp="1602188540090">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="301" key="GridCell.Tab.0.right/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602186337660" />
+    <state width="1397" height="151" key="GridCell.Tab.0.right/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602188540090" />
     <state width="1877" height="271" key="GridCell.Tab.0.right/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1602159201140" />
     <state width="1397" height="180" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1602082599066" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1602157673399">
@@ -134,9 +151,9 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="456" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1440.920@0.0.1440.920" timestamp="1602065864497" />
-    <state x="422" y="218" key="refactoring.ChangeSignatureDialog" timestamp="1602146249331">
+    <state x="422" y="218" key="refactoring.ChangeSignatureDialog" timestamp="1602188515770">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="422" y="218" key="refactoring.ChangeSignatureDialog/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602146249331" />
+    <state x="422" y="218" key="refactoring.ChangeSignatureDialog/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1602188515770" />
   </component>
 </project>
