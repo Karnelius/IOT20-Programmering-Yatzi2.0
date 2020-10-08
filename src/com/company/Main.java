@@ -6,10 +6,9 @@ public class Main {
 
     public static Die[] dice;
     public static boolean gameIsOn = true;
-
-
+    public static int rollingTurn = 0;
+    
     public static void main(String[] args) {
-        int rollingTurn = 0;
         theDice();
         welcomeMessage();
         while (gameIsOn) {
@@ -24,8 +23,7 @@ public class Main {
                     return;
                 } else {
                     if (rollingTurn != 2) {
-                        System.out.println("Want to throw again? (y for yes, anything else for no)");
-                        ContinueToPlay(rollingTurn++);
+                        continueToPlayYesOrNo();
                         break;
                     }
                     System.out.println("Game over! Want to play again?");
@@ -34,6 +32,11 @@ public class Main {
                 }
             }
         }
+    }
+
+    private static void continueToPlayYesOrNo() {
+        System.out.println("Want to throw again? (y for yes, anything else for no)");
+        ContinueToPlay(rollingTurn++);
     }
 
     static void welcomeMessage() {
