@@ -2,9 +2,8 @@ package com.company;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-
 import static org.junit.jupiter.api.Assertions.*;
+
 
 public class YatziTest extends Main {
     @DisplayName("Se att den skriver ut Yatzi när man får alla rätt?")

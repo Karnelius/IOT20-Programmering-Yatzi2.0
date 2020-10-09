@@ -9,12 +9,8 @@ class Die {
     }
 
     public int DieRoll() {
-        value = (int) (Math.random() * 2 + 1);
+        value = (int) (Math.random() * 6 + 1);
         return value;
 
-    }
-
-    public String diceString() {
-        return "Dice shows " + value;
     }
 }

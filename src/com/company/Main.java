@@ -1,13 +1,10 @@
 package com.company;
-
 import java.util.Scanner;
-
 public class Main {
-
     public static Die[] dice;
     public static boolean gameIsOn = true;
     public static int rollingTurn = 0;
-    
+
     public static void main(String[] args) {
         theDice();
         welcomeMessage();
@@ -16,40 +13,37 @@ public class Main {
                 System.out.println("Starting turn " + (rollingTurn + 1) + " of 3, rolling dice.");
                 for (int i = 0; i < dice.length; i++) {
                     dice[i].DieRoll();
-                    System.out.println(i + 1 + ": " + dice[i].diceString());
+                    System.out.println(i + 1 + ": Dice shows: " + dice[i].value);
                 }
                 if (flagIfYatzi()) {
                     System.out.println("You got YATZI! in " + dice[0].value + "'s");
                     return;
                 } else {
                     if (rollingTurn != 2) {
-                        continueToPlayYesOrNo();
+                        wantToContinueToPlayYesOrNo();
                         break;
                     }
                     System.out.println("Game over! Want to play again?");
-                    ContinueToPlay(rollingTurn = 0);
+                    playerInputToPlay(rollingTurn = 0);
                     break;
-                }
-            }
-        }
-    }
+                } } } }
 
-    private static void continueToPlayYesOrNo() {
+    private static void wantToContinueToPlayYesOrNo() {
         System.out.println("Want to throw again? (y for yes, anything else for no)");
-        ContinueToPlay(rollingTurn++);
+        playerInputToPlay(rollingTurn++);
+    }
+    static void playerInputToPlay(int i) {
+        Scanner sc = new Scanner(System.in);
+        if ("y".equals(sc.next())) {
+        } else {
+            gameIsOn = !gameIsOn;
+        }
     }
 
     static void welcomeMessage() {
         System.out.println("Welcome to Yatzi");
     }
 
-    static void ContinueToPlay(int i) {
-        Scanner sc = new Scanner(System.in);
-        if (sc.next().equals("y")) {
-        } else {
-            gameIsOn = !gameIsOn;
-        }
-    }
 
     static boolean flagIfYatzi() {
         boolean flagIfYatzi = true;
@@ -65,6 +59,4 @@ public class Main {
         dice = new Die[5];
         for (int d = 0; d < 5; d++) {
             dice[d] = new Die();
-        }
-    }
-}
+        }}}
