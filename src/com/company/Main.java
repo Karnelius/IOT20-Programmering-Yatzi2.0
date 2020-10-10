@@ -25,20 +25,17 @@ public class Main {
 
 
 
-    private static boolean gameOver() {
+    private static void gameOver() {
         System.out.println("Game over! Want to play again?");
         playerInputToPlay(rollingTurn = 0);
-        return false;
     }
 
-    private static boolean gamePlay() {
+    private static void gamePlay() {
         System.out.println("Starting turn " + (rollingTurn + 1) + " of 3, rolling dice.");
         for (int i = 0; i < dice.length; i++) {
             dice[i].DieRoll();
             System.out.println(i + 1 + ": Dice shows: " + dice[i].value);
-        }
-        return true;
-    }
+        } }
 
     public static void wantToContinueToPlayYesOrNo() {
         System.out.println("Want to throw again? (y for yes, anything else for no)");
