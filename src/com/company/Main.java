@@ -10,11 +10,7 @@ public class Main {
         welcomeMessage();
         while (gameIsOn) {
             while (rollingTurn < 3) {
-                System.out.println("Starting turn " + (rollingTurn + 1) + " of 3, rolling dice.");
-                for (int i = 0; i < dice.length; i++) {
-                    dice[i].DieRoll();
-                    System.out.println(i + 1 + ": Dice shows: " + dice[i].value);
-                }
+               newGame();
                 if (flagIfYatzi()) {
                     System.out.println("You got YATZI! in " + dice[0].value + "'s");
                     return;
@@ -23,12 +19,28 @@ public class Main {
                         wantToContinueToPlayYesOrNo();
                         break;
                     }
-                    System.out.println("Game over! Want to play again?");
-                    playerInputToPlay(rollingTurn = 0);
+                    gameOver();
                     break;
                 } } } }
 
-    private static void wantToContinueToPlayYesOrNo() {
+
+
+    private static boolean gameOver() {
+        System.out.println("Game over! Want to play again?");
+        playerInputToPlay(rollingTurn = 0);
+        return false;
+    }
+
+    private static boolean newGame() {
+        System.out.println("Starting turn " + (rollingTurn + 1) + " of 3, rolling dice.");
+        for (int i = 0; i < dice.length; i++) {
+            dice[i].DieRoll();
+            System.out.println(i + 1 + ": Dice shows: " + dice[i].value);
+        }
+        return true;
+    }
+
+    public static void wantToContinueToPlayYesOrNo() {
         System.out.println("Want to throw again? (y for yes, anything else for no)");
         playerInputToPlay(rollingTurn++);
     }
@@ -44,7 +56,6 @@ public class Main {
         System.out.println("Welcome to Yatzi");
     }
 
-
     static boolean flagIfYatzi() {
         boolean flagIfYatzi = true;
         for (int j = 1; j < 5; j++) {
@@ -55,7 +66,7 @@ public class Main {
         return flagIfYatzi;
     }
 
-    private static void theDice() {
+    public static void theDice() {
         dice = new Die[5];
         for (int d = 0; d < 5; d++) {
             dice[d] = new Die();
