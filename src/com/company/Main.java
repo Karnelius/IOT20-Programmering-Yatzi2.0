@@ -10,7 +10,7 @@ public class Main {
         welcomeMessage();
         while (gameIsOn) {
             while (rollingTurn < 3) {
-               newGame();
+               gamePlay();
                 if (flagIfYatzi()) {
                     System.out.println("You got YATZI! in " + dice[0].value + "'s");
                     return;
@@ -31,7 +31,7 @@ public class Main {
         return false;
     }
 
-    private static boolean newGame() {
+    private static boolean gamePlay() {
         System.out.println("Starting turn " + (rollingTurn + 1) + " of 3, rolling dice.");
         for (int i = 0; i < dice.length; i++) {
             dice[i].DieRoll();
