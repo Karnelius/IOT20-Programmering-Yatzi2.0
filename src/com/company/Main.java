@@ -59,7 +59,8 @@ public class Main {
         System.out.println("Welcome to Yatzi");
     }
 
-     static boolean isYatzi(Die[] dice) {
+
+    boolean isYatzi(Die[] dice) {
         boolean isYatzi = true;
         for (int j = 1; j < 5; j++) {
             if (dice[j].value != dice[j - 1].value) {

@@ -6,6 +6,8 @@ import static org.junit.Assert.*;
 
 
 public class YatziTest {
+    Main game = new Main();
+
 
     @DisplayName("Checks if you get Yatzi when all the dices are the same")
     @Test
@@ -16,7 +18,7 @@ public class YatziTest {
         dice[2] = new Die(1);
         dice[3] = new Die(1);
         dice[4] = new Die(1);
-        assertTrue((Main.isYatzi(dice)));
+        assertTrue((game.isYatzi(dice)));
     }
 
     @DisplayName("Checks if you don't get Yatzi when all the dices are not the same")
@@ -29,6 +31,6 @@ public class YatziTest {
         dice[3] = new Die(4);
         dice[4] = new Die(5);
 
-        assertFalse(Main.isYatzi(dice));
+        assertFalse(game.isYatzi(dice));
     }
 }
