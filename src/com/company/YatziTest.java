@@ -16,7 +16,7 @@ public class YatziTest {
 
 
 
-    @DisplayName("Se att den skriver ut Yatzi när man får alla rätt?")
+    @DisplayName("Checks if you get Yatzi when all the dices are the same")
     @Test
     void isYatziWhenAllDiceMatches() {
         Die[] dice = new Die[5];
@@ -31,17 +31,17 @@ public class YatziTest {
 
 
 
-    @DisplayName("Fortsätter när man inte får 5 matchande dices?")
+    @DisplayName("Checks if you don't get Yatzi when all the dices are not the same")
     @Test
-    public boolean isNotYatziWhenOneDieIsNotMatchingTheOther() {
+    void isNotYatziWhenOneDieIsNotMatchingTheOther() {
         Die[] dice = new Die[5];
-        for (int i = 0; i < dice.length; i++) {
-            Die die = dice[i];
-            die.value = 6;
-        }
-        dice[5].value = 1;
-        Assertions.assertNotEquals(flagIfYatzi(dice));
-        return false;
+        dice[0] = new Die(1);
+        dice[1] = new Die(2);
+        dice[2] = new Die(3);
+        dice[3] = new Die(4);
+        dice[4] = new Die(5);
+
+        assertFalse(Main.flagIfYatzi(dice));
     }
 
 }
