@@ -13,4 +13,9 @@ class Die {
         return value;
 
     }
+    public Die(int i){
+        value = i;
+    }
 }
+
+//överskuggning DIe / DIe (int i)
