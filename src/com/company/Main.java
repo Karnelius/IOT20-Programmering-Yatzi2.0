@@ -15,7 +15,7 @@ public class Main {
         while (gameIsOn) {
             while (rollingTurn < 3) {
                 game.isGamePlay();
-                if (game.IsYatzi(dice)) {
+                if (game.isYatzi(dice)) {
                     System.out.println("You got YATZI! in " + dice[0].value + "'s");
                     return;
                 } else if (rollingTurn != 2) {
@@ -59,15 +59,15 @@ public class Main {
         System.out.println("Welcome to Yatzi");
     }
 
-     static boolean IsYatzi(Die[] dice) {
-        boolean IsYatzi = true;
+     static boolean isYatzi(Die[] dice) {
+        boolean isYatzi = true;
         for (int j = 1; j < 5; j++) {
             if (dice[j].value != dice[j - 1].value) {
-                IsYatzi = false;
+                isYatzi = false;
                 break;
             }
         }
-        return IsYatzi;
+        return isYatzi;
     }
 
     void createDice() {
