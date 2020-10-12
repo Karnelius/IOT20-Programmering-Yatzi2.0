@@ -1,20 +1,11 @@
 package com.company;
-import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
-
-import static com.company.Main.flagIfYatzi;
-import static com.company.Die.*;
-import static com.company.Main.*;
 import static org.junit.Assert.*;
 
 
 public class YatziTest {
-
-
 
     @DisplayName("Checks if you get Yatzi when all the dices are the same")
     @Test
@@ -25,11 +16,8 @@ public class YatziTest {
         dice[2] = new Die(1);
         dice[3] = new Die(1);
         dice[4] = new Die(1);
-        assertTrue((Main.flagIfYatzi(dice)));
+        assertTrue((Main.IsYatzi(dice)));
     }
-
-
-
 
     @DisplayName("Checks if you don't get Yatzi when all the dices are not the same")
     @Test
@@ -41,7 +29,6 @@ public class YatziTest {
         dice[3] = new Die(4);
         dice[4] = new Die(5);
 
-        assertFalse(Main.flagIfYatzi(dice));
+        assertFalse(Main.IsYatzi(dice));
     }
-
 }

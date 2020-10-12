@@ -8,12 +8,12 @@ public class Main {
     public static int rollingTurn = 0;
 
     public static void main(String[] args) {
-        theDice();
+        createDice();
         welcomeMessage();
         while (gameIsOn) {
             while (rollingTurn < 3) {
-                gamePlay();
-                if (flagIfYatzi(dice)) {
+                isGamePlay();
+                if (IsYatzi(dice)) {
                     System.out.println("You got YATZI! in " + dice[0].value + "'s");
                     return;
                 } else if (rollingTurn != 2) {
@@ -27,12 +27,12 @@ public class Main {
     }
 
 
-    public static void gameOver() {
+    static void gameOver() {
         System.out.println("Game over! Want to play again?");
         playerInputToPlay(rollingTurn = 0);
     }
 
-    private static void gamePlay() {
+    static void isGamePlay() { //verb
         System.out.println("Starting turn " + (rollingTurn + 1) + " of 3, rolling dice.");
         for (int i = 0; i < dice.length; i++) {
             dice[i].DieRoll();
@@ -40,7 +40,7 @@ public class Main {
         }
     }
 
-    public static void wantToContinueToPlayYesOrNo() {
+    static void wantToContinueToPlayYesOrNo() {
         System.out.println("Want to throw again? (y for yes, anything else for no)");
         playerInputToPlay(rollingTurn++);
     }
@@ -57,18 +57,18 @@ public class Main {
         System.out.println("Welcome to Yatzi");
     }
 
-    static boolean flagIfYatzi(Die[] dice) {
-        boolean flagIfYatzi = true;
+    static boolean IsYatzi(Die[] dice) {
+        boolean IsYatzi = true;
         for (int j = 1; j < 5; j++) {
             if (dice[j].value != dice[j - 1].value) {
-                flagIfYatzi = false;
+                IsYatzi = false;
                 break;
             }
         }
-        return flagIfYatzi;
+        return IsYatzi;
     }
 
-    public static void theDice() {
+    static void createDice() {
         dice = new Die[5];
         for (int d = 0; d < 5; d++) {
             dice[d] = new Die();
