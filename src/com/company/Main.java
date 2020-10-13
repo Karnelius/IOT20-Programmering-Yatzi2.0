@@ -12,21 +12,18 @@ public class Main {
 
         game.createDice();
         game.welcomeMessage();
-        while (gameIsOn)
-            while (rollingTurn < 3) {
-                game.isGamePlay();
-                if (game.isYatzi(dice)) {
-                    System.out.println("You got YATZI! in " + dice[0].value + "'s");
-                    return;
-                } else if (rollingTurn != 2) {
-                    game.continueToPlayAction();
-                    break;
-                }
+        while ((gameIsOn) && (rollingTurn < 3)) {
+            game.isGamePlay();
+            if (game.isYatzi(dice)) {
+                System.out.println("You got YATZI! in " + dice[0].value + "'s");
+                return;
+            } else if (rollingTurn !=2) {
+                game.continueToPlayAction();
+            } else {
                 game.gameOver();
-                break;
             }
         }
-
+    }
 
 
     void gameOver() {
@@ -34,7 +31,7 @@ public class Main {
         playerInputToPlay(rollingTurn = 0);
     }
 
-    void isGamePlay() { //verb
+    void isGamePlay() {
         System.out.println("Starting turn " + (rollingTurn + 1) + " of 3, rolling dice.");
         for (int i = 0; i < dice.length; i++) {
             dice[i].DieRoll();
