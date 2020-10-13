@@ -17,7 +17,7 @@ public class Main {
             if (game.isYatzi(dice)) {
                 System.out.println("You got YATZI! in " + dice[0].value + "'s");
                 return;
-            } else if (rollingTurn !=2) {
+            } else if (rollingTurn != 2) {
                 game.continueToPlayAction();
             } else {
                 game.gameOver();
