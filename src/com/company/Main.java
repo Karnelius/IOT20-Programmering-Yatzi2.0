@@ -12,21 +12,21 @@ public class Main {
 
         game.createDice();
         game.welcomeMessage();
-        while (gameIsOn) {
+        while (gameIsOn)
             while (rollingTurn < 3) {
                 game.isGamePlay();
                 if (game.isYatzi(dice)) {
                     System.out.println("You got YATZI! in " + dice[0].value + "'s");
                     return;
                 } else if (rollingTurn != 2) {
-                    game.wantToContinueToPlayYesOrNo();
+                    game.continueToPlayAction();
                     break;
                 }
                 game.gameOver();
                 break;
             }
         }
-    }
+
 
 
     void gameOver() {
@@ -42,7 +42,7 @@ public class Main {
         }
     }
 
-    void wantToContinueToPlayYesOrNo() {
+    void continueToPlayAction() {
         System.out.println("Want to throw again? (y for yes, anything else for no)");
         playerInputToPlay(rollingTurn++);
     }
